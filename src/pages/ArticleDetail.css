@@ -1,0 +1,204 @@
+.detail-page { padding-top: 68px; }
+
+.detail-header {
+  border-bottom: 1px solid var(--border);
+  padding: 3.5rem 2.5rem 2.5rem;
+}
+
+.detail-header-inner { max-width: 760px; margin: 0 auto; }
+
+.back-link {
+  display: inline-block;
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+  background: none;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.back-link:hover { color: #fff; }
+
+.detail-tag {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  background: rgba(16,185,129,0.08);
+  color: var(--green);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(16,185,129,0.12);
+}
+
+.detail-header h1 {
+  font-size: clamp(1.8rem, 4vw, 2.75rem);
+  letter-spacing: -1px;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+  color: #fff;
+}
+
+.detail-meta {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+.meta-dot { opacity: 0.35; }
+
+.detail-body {
+  max-width: 1100px;
+  margin: 3rem auto 6rem;
+  padding: 0 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 4rem;
+  align-items: start;
+}
+
+.article-content { min-width: 0; }
+
+.article-lead {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.8;
+  margin-bottom: 2.25rem;
+  padding-bottom: 2.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.article-para {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.9;
+  margin-bottom: 1.25rem;
+}
+
+.article-h3 {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 2.25rem 0 0.75rem;
+  letter-spacing: -0.3px;
+}
+
+.article-list {
+  margin: 0.5rem 0 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.article-list li {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.75;
+}
+
+.article-list-ol { list-style: decimal; }
+
+/* Sidebar */
+.related-section { position: sticky; top: 88px; }
+
+.related-section h3 {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.related-list { display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1.25rem; }
+
+.related-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.related-card:hover { background: var(--bg-card2); }
+
+.related-tag { font-size: 0.67rem; font-weight: 700; text-transform: uppercase; color: var(--green); letter-spacing: 0.4px; }
+.related-title { font-size: 0.875rem; color: #fff; line-height: 1.35; font-weight: 500; }
+.related-read { font-size: 0.72rem; color: var(--muted); }
+
+.all-articles-link {
+  display: block;
+  color: var(--green);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.7rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid rgba(16,185,129,0.2);
+  transition: background 0.2s;
+}
+.all-articles-link:hover { background: rgba(16,185,129,0.06); }
+
+/* Author byline */
+.meta-author {
+  color: var(--green);
+  font-weight: 600;
+}
+
+/* Citations */
+.article-citations {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.citations-heading {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--muted);
+  margin-bottom: 1.1rem;
+}
+
+.citations-list {
+  list-style: decimal;
+  padding-left: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.citation-item {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.cite-authors { color: rgba(255,255,255,0.5); }
+.cite-title   { font-style: italic; color: rgba(255,255,255,0.6); }
+.cite-source  { color: rgba(255,255,255,0.45); font-weight: 500; }
+.cite-date    { color: rgba(255,255,255,0.35); }
+
+.cite-link {
+  color: var(--green);
+  text-decoration: none;
+  word-break: break-all;
+  transition: opacity 0.2s;
+}
+.cite-link:hover { opacity: 0.7; text-decoration: underline; }
+
+.not-found { text-align: center; padding: 8rem 2rem; }
+
+@media (max-width: 900px) {
+  .detail-body { grid-template-columns: 1fr; }
+  .related-section { position: static; }
+}
