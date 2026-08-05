@@ -1,1 +1,5 @@
+# Redirect www to apex canonical domain
+https://www.moneasey.org/* https://moneasey.org/:splat 301!
+
+# SPA fallback — all routes serve index.html
 /* /index.html 200
