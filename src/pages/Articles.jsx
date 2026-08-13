@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import { articles, topics } from '../data/articles'
 import './Articles.css'
 
@@ -15,6 +16,12 @@ export default function Articles() {
   })
 
   return (
+    <>
+    <Helmet>
+      <title>Financial Articles — moneasey</title>
+      <meta name="description" content="Browse 60+ free articles on budgeting, investing, credit scores, taxes, retirement, and more. Written by financial experts and students. No sign-up required." />
+      <link rel="canonical" href="https://moneasey.org/articles" />
+    </Helmet>
     <main className="articles-page">
       <div className="articles-hero">
         <div className="articles-hero-inner">
@@ -89,5 +96,6 @@ export default function Articles() {
         )}
       </div>
     </main>
+    </>
   )
 }

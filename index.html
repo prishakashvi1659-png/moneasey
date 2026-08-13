@@ -4,7 +4,100 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>moneasey</title>
+    <title>moneasey — Free Financial Literacy for Everyone</title>
+    <meta name="description" content="moneasey is a free nonprofit financial literacy platform with 60+ articles, 25 how-to lessons, and an AI trade simulator. Learn budgeting, investing, credit, taxes, and more — no account required." />
+    <meta name="keywords" content="financial literacy, personal finance, budgeting, investing, credit score, Roth IRA, how to invest, free financial education, nonprofit" />
+    <link rel="canonical" href="https://moneasey.org/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://moneasey.org/" />
+    <meta property="og:title" content="moneasey — Free Financial Literacy for Everyone" />
+    <meta property="og:description" content="Free nonprofit platform for financial education. 60+ articles, 25 interactive lessons, AI trade simulator. No sign-up, no paywall." />
+    <meta property="og:site_name" content="moneasey" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="moneasey — Free Financial Literacy for Everyone" />
+    <meta name="twitter:description" content="Free nonprofit financial education. 60+ articles, 25 how-to lessons, AI trade simulator." />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["EducationalOrganization", "NGO"],
+          "@id": "https://moneasey.org/#organization",
+          "name": "moneasey",
+          "url": "https://moneasey.org",
+          "logo": "https://moneasey.org/favicon.svg",
+          "description": "moneasey is a nonprofit financial literacy platform providing free education on budgeting, investing, credit, taxes, and personal finance.",
+          "sameAs": ["https://www.instagram.com/moneaseyy/"],
+          "knowsAbout": ["Personal Finance","Budgeting","Investing","Credit Scores","Retirement Planning","Tax Planning","Student Loans","Compound Interest"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://moneasey.org/#website",
+          "url": "https://moneasey.org",
+          "name": "moneasey",
+          "description": "Free nonprofit financial literacy platform with 60+ articles, 25 how-to lessons, and an AI trade simulator.",
+          "publisher": { "@id": "https://moneasey.org/#organization" },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": { "@type": "EntryPoint", "urlTemplate": "https://moneasey.org/articles?search={search_term_string}" },
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://moneasey.org/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How do I start investing with little money?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Start with as little as $1 using fractional shares on platforms like Fidelity or Schwab. Open a Roth IRA if you have earned income — you can invest up to $7,000/year in 2026 and all growth is tax-free. Begin with low-cost index funds like VTI or SPY rather than individual stocks. Even $25/month at a 7% average return grows to over $30,000 in 30 years thanks to compound interest." }
+            },
+            {
+              "@type": "Question",
+              "name": "What is a Roth IRA and should I open one?",
+              "acceptedAnswer": { "@type": "Answer", "text": "A Roth IRA is a retirement account where you invest after-tax money, but all future growth and withdrawals are completely tax-free. In 2026, you can contribute up to $7,000/year if you have earned income. For young people in lower tax brackets, it is one of the best financial tools available. A 22-year-old who contributes $7,000/year until age 65 at a 7% return accumulates over $1.8 million — all tax-free." }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I create a budget that actually works?",
+              "acceptedAnswer": { "@type": "Answer", "text": "The 50/30/20 rule is the simplest framework: 50% of after-tax income to needs (rent, food, utilities), 30% to wants (entertainment, dining out), and 20% to savings and debt repayment. Track every expense for one month first to see where your money actually goes. Most people underestimate their spending by 20–30%." }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I improve my credit score?",
+              "acceptedAnswer": { "@type": "Answer", "text": "The five factors: payment history (35%), amounts owed (30%), length of credit history (15%), credit mix (10%), new credit (10%). Fastest wins: pay all bills on time with autopay, keep credit card balances below 30% of your limit, and do not close old credit cards. A secured credit card is the best starting point if you have no credit history." }
+            },
+            {
+              "@type": "Question",
+              "name": "What is compound interest?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Compound interest means earning interest on your interest — your money grows exponentially. $10,000 at 7% per year becomes $19,672 after 10 years, $38,697 after 20 years, and $76,123 after 30 years. Starting at 22 vs. 32 can mean a difference of hundreds of thousands of dollars at retirement." }
+            },
+            {
+              "@type": "Question",
+              "name": "What should I do with my first paycheck?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Follow this order: (1) Build a $1,000 starter emergency fund. (2) Contribute enough to your 401k to get the full employer match — that is free money. (3) Pay off high-interest debt. (4) Build emergency fund to 3–6 months of expenses. (5) Max out Roth IRA. (6) Invest additional savings in a brokerage account." }
+            },
+            {
+              "@type": "Question",
+              "name": "Is moneasey free to use?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes — 100% free, forever. moneasey is a nonprofit organization. We do not sell financial products, charge subscription fees, or earn referral commissions. All 60+ articles, 25 interactive lessons, and the AI trade simulator are completely free with no account required." }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the best free financial literacy website?",
+              "acceptedAnswer": { "@type": "Answer", "text": "moneasey (moneasey.org) is a free nonprofit financial literacy platform offering 60+ expert-written articles, 25 step-by-step interactive lessons, and an AI trade simulator. Unlike most financial sites, moneasey does not earn commissions or referral fees — all content is unbiased and completely free with no sign-up required." }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

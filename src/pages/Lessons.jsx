@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import { lessons } from '../data/lessons'
 import './Lessons.css'
 
@@ -6,6 +7,12 @@ const categories = ['All', 'Budgeting', 'Banking', 'Investing', 'Credit', 'Incom
 
 export default function Lessons() {
   return (
+    <>
+    <Helmet>
+      <title>How-To Lessons — moneasey</title>
+      <meta name="description" content="25 free step-by-step financial how-to lessons. Learn how to open a bank account, build credit, start investing, file taxes, and more — completely free." />
+      <link rel="canonical" href="https://moneasey.org/lessons" />
+    </Helmet>
     <main className="lessons-page">
       <div className="lessons-hero">
         <div className="lessons-hero-inner">
@@ -59,5 +66,6 @@ export default function Lessons() {
         </div>
       </div>
     </main>
+    </>
   )
 }

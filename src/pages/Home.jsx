@@ -1,7 +1,35 @@
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import { lessons } from '../data/lessons'
 import { articles } from '../data/articles'
 import './Home.css'
+
+const faqs = [
+  {
+    q: "How do I start investing with little money?",
+    a: "Start with as little as $1 using fractional shares on platforms like Fidelity or Schwab. Open a Roth IRA if you have earned income — you can contribute up to $7,000/year in 2026 and all growth is completely tax-free. Begin with low-cost index funds like VTI or SPY rather than individual stocks. Even $25/month at a 7% average return grows to over $30,000 in 30 years thanks to compound interest.",
+  },
+  {
+    q: "What is a Roth IRA and should I open one?",
+    a: "A Roth IRA is a retirement account where you contribute after-tax money, but all future growth and withdrawals are 100% tax-free. For young people in lower tax brackets, it's one of the best financial tools available. A 22-year-old who contributes $7,000/year until 65 at 7% return accumulates over $1.8 million — all tax-free.",
+  },
+  {
+    q: "How do I create a budget that actually works?",
+    a: "Use the 50/30/20 rule: 50% of after-tax income to needs (rent, food, utilities), 30% to wants (dining, entertainment), 20% to savings and debt repayment. Track every expense for one month first — most people underestimate spending by 20–30%. Free tools like Mint or a simple spreadsheet work great.",
+  },
+  {
+    q: "How do I improve my credit score?",
+    a: "Your FICO score is determined by: payment history (35%), amounts owed (30%), length of history (15%), credit mix (10%), new credit (10%). Fastest wins: set autopay so you never miss a payment, keep credit card balances below 30% of your limit, and don't close old cards. A secured card is the best starting point with no credit history.",
+  },
+  {
+    q: "What should I do with my first paycheck?",
+    a: "Follow this order: (1) Build a $1,000 starter emergency fund. (2) Contribute enough to your 401k to get the full employer match — that's free money you can't leave on the table. (3) Pay off high-interest debt. (4) Grow emergency fund to 3–6 months of expenses. (5) Max your Roth IRA. (6) Invest extra in a brokerage account.",
+  },
+  {
+    q: "Is moneasey free to use?",
+    a: "Yes — 100% free, forever. moneasey is a nonprofit. We don't sell financial products, charge subscription fees, or earn referral commissions. All 60+ articles, 25 interactive lessons, and the AI trade simulator are completely free with no sign-up required.",
+  },
+]
 
 const stats = [
   { value: '60+', label: 'Articles Published' },
@@ -42,6 +70,12 @@ export default function Home() {
   const featuredLessons = lessons.slice(0, 3)
 
   return (
+    <>
+    <Helmet>
+      <title>moneasey — Free Financial Literacy for Everyone</title>
+      <meta name="description" content="Free nonprofit financial education. 60+ articles on budgeting, investing, credit & taxes. 25 interactive how-to lessons. AI trade simulator. No sign-up required." />
+      <link rel="canonical" href="https://moneasey.org/" />
+    </Helmet>
     <main className="home">
       {/* HERO */}
       <section className="hero">
@@ -165,6 +199,22 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="section faq-section">
+        <div className="section-header">
+          <h2>Common questions, answered</h2>
+          <p>Straight answers — no jargon, no referral links.</p>
+        </div>
+        <div className="faq-list">
+          {faqs.map((f, i) => (
+            <details key={i} className="faq-item">
+              <summary className="faq-q">{f.q}</summary>
+              <p className="faq-a">{f.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
       {/* CTA BANNER */}
       <section className="cta-banner">
         <div className="cta-glow" />
@@ -176,5 +226,6 @@ export default function Home() {
         </div>
       </section>
     </main>
+    </>
   )
 }

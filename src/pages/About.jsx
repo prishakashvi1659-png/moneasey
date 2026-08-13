@@ -9,23 +9,58 @@ import './About.css'
 //   linkedin — optional LinkedIn URL
 const team = [
   {
-    name: "Your Name Here",
-    role: "Founder & Executive Director",
-    bio: "Replace this with a short bio. Paste your team's names, roles, bios, and photo URLs and I'll update this section instantly.",
+    name: "Prisha Kashvi",
+    role: "Founder & CEO",
+    bio: "Prisha founded moneasey out of a belief that financial literacy should be a right, not a privilege. As the driving force behind the platform, she leads strategy, content direction, and partnerships — building a nonprofit that gives everyone the tools to understand their money.",
+    photo: "/team/prisha.jpg",
+    linkedin: "",
+  },
+  {
+    name: "Om Khade",
+    role: "Tech Operations Manager",
+    bio: "Om keeps the moneasey platform running at its best. He oversees technical infrastructure, site performance, and the operational systems that ensure our content reaches students seamlessly. His engineering background shapes every feature on the platform.",
+    photo: "/team/om.jpg",
+    linkedin: "",
+  },
+  {
+    name: "Ritwik Desai",
+    role: "Tech Operations Manager",
+    bio: "Ritwik bridges design and engineering to bring moneasey's educational tools to life. From feature development to system reliability, he works to build a platform that's fast, accessible, and built to scale with our growing community.",
+    photo: "/team/ritwik.jpg",
+    linkedin: "",
+  },
+  {
+    name: "Ishita",
+    role: "Outreach Manager",
+    bio: "Ishita connects moneasey with the communities who need it most. She leads partnership development, school outreach, and grassroots campaigns that expand access to free financial education across underserved students and communities.",
+    photo: "/team/ishita.jpg",
+    linkedin: "",
+  },
+  {
+    name: "Mustafa Badshah",
+    role: "Secretary",
+    bio: "Mustafa ensures moneasey's operations run with precision and purpose. He manages organizational documentation, coordinates internal communications, and keeps the team aligned on goals — the backbone that holds everything together behind the scenes.",
     photo: "",
     linkedin: "",
   },
   {
-    name: "Team Member",
-    role: "Director of Programs",
-    bio: "Replace this placeholder with the real person's information. Just paste names, roles, bios, and photos in chat.",
+    name: "Akshay Kolluru",
+    role: "Outreach Operations Manager",
+    bio: "Akshay drives moneasey's outreach operations, coordinating initiatives that bring financial literacy programs to schools and community organizations. He also contributes original research and articles to the platform, combining academic insight with real-world financial perspective.",
     photo: "",
     linkedin: "",
   },
   {
-    name: "Team Member",
-    role: "Content & Education Lead",
-    bio: "Another placeholder — send me your team details and I'll fill these in right away.",
+    name: "Yusef",
+    role: "Social Media Manager",
+    bio: "Yusef crafts moneasey's digital presence across social platforms, turning complex financial concepts into content that resonates with Gen Z. His creative approach grows our community and ensures financial literacy reaches people where they already spend their time.",
+    photo: "",
+    linkedin: "",
+  },
+  {
+    name: "Daniel",
+    role: "Social Media Manager",
+    bio: "Daniel brings moneasey's mission to life through compelling storytelling and social strategy. He develops campaigns that engage our growing audience and ensures that the message of free, accessible financial education spreads as widely as possible.",
     photo: "",
     linkedin: "",
   },
@@ -149,13 +184,6 @@ export default function About() {
             ))}
           </div>
 
-          <div className="team-notice">
-            <span>👋</span>
-            <p>
-              <strong>Want to see your real team here?</strong> Send me names, roles, short bios,
-              and photo links (or upload photos) and I'll update this page instantly.
-            </p>
-          </div>
         </div>
       </section>
 
