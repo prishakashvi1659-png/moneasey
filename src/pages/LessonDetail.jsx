@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import { lessons } from '../data/lessons'
 import './LessonDetail.css'
 
@@ -63,7 +64,47 @@ export default function LessonDetail() {
     })
   }
 
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "@id": `https://moneasey.org/lessons/${lesson.id}`,
+    "name": lesson.title,
+    "description": lesson.description,
+    "totalTime": lesson.duration,
+    "educationalLevel": lesson.difficulty,
+    "provider": {
+      "@type": "Organization",
+      "@id": "https://moneasey.org/#organization",
+      "name": "moneasey"
+    },
+    "step": lesson.steps.map((s, i) => ({
+      "@type": "HowToStep",
+      "position": i + 1,
+      "name": s.title,
+      "text": s.content ? s.content.replace(/\*\*/g, '').trim().slice(0, 300) : s.title,
+      "url": `https://moneasey.org/lessons/${lesson.id}#step-${i + 1}`
+    })),
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://moneasey.org/" },
+        { "@type": "ListItem", "position": 2, "name": "Lessons", "item": "https://moneasey.org/lessons" },
+        { "@type": "ListItem", "position": 3, "name": lesson.title, "item": `https://moneasey.org/lessons/${lesson.id}` }
+      ]
+    }
+  }
+
   return (
+    <>
+    <Helmet>
+      <title>{lesson.title} — moneasey</title>
+      <meta name="description" content={lesson.description} />
+      <link rel="canonical" href={`https://moneasey.org/lessons/${lesson.id}`} />
+      <meta property="og:title" content={`${lesson.title} — moneasey`} />
+      <meta property="og:description" content={lesson.description} />
+      <meta property="og:url" content={`https://moneasey.org/lessons/${lesson.id}`} />
+      <script type="application/ld+json">{JSON.stringify(howToSchema)}</script>
+    </Helmet>
     <main className="lesson-detail-page">
       {/* Header */}
       <div className="ld-header">
@@ -184,5 +225,6 @@ export default function LessonDetail() {
         </div>
       </div>
     </main>
+    </>
   )
 }

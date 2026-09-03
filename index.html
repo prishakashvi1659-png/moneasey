@@ -30,11 +30,90 @@
           "@type": ["EducationalOrganization", "NGO"],
           "@id": "https://moneasey.org/#organization",
           "name": "moneasey",
+          "alternateName": "Moneasey",
           "url": "https://moneasey.org",
-          "logo": "https://moneasey.org/favicon.svg",
-          "description": "moneasey is a nonprofit financial literacy platform providing free education on budgeting, investing, credit, taxes, and personal finance.",
-          "sameAs": ["https://www.instagram.com/moneaseyy/"],
-          "knowsAbout": ["Personal Finance","Budgeting","Investing","Credit Scores","Retirement Planning","Tax Planning","Student Loans","Compound Interest"]
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://moneasey.org/favicon.svg",
+            "contentUrl": "https://moneasey.org/favicon.svg"
+          },
+          "description": "moneasey is a free nonprofit financial literacy platform providing education on budgeting, investing, credit, taxes, and personal finance to underserved communities.",
+          "foundingDate": "2025",
+          "nonprofitStatus": "Nonprofit501c3",
+          "areaServed": "Worldwide",
+          "audience": {
+            "@type": "Audience",
+            "audienceType": "Students, Young Adults, First-Generation Investors"
+          },
+          "founder": {
+            "@type": "Person",
+            "@id": "https://moneasey.org/#founder",
+            "name": "Prisha Kashvi",
+            "jobTitle": "Founder & CEO",
+            "worksFor": { "@id": "https://moneasey.org/#organization" }
+          },
+          "member": [
+            { "@type": "Person", "name": "Prisha Kashvi", "jobTitle": "Founder & CEO" },
+            { "@type": "Person", "name": "Om Khade", "jobTitle": "Tech Operations Manager" },
+            { "@type": "Person", "name": "Ritwik Desai", "jobTitle": "Tech Operations Manager" },
+            { "@type": "Person", "name": "Ishita", "jobTitle": "Outreach Manager" },
+            { "@type": "Person", "name": "Mustafa Badshah", "jobTitle": "Secretary" },
+            { "@type": "Person", "name": "Akshay Kolluru", "jobTitle": "Outreach Operations Manager" },
+            { "@type": "Person", "name": "Yusef", "jobTitle": "Social Media Manager" },
+            { "@type": "Person", "name": "Daniel", "jobTitle": "Social Media Manager" }
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Free Financial Education",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Course",
+                  "name": "Financial Literacy Articles",
+                  "description": "60+ free articles covering budgeting, investing, credit scores, taxes, retirement, and personal finance.",
+                  "url": "https://moneasey.org/articles",
+                  "provider": { "@id": "https://moneasey.org/#organization" }
+                },
+                "price": "0",
+                "priceCurrency": "USD"
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Course",
+                  "name": "How-To Financial Lessons",
+                  "description": "25 free step-by-step interactive lessons on real financial tasks — opening a bank account, building credit, filing taxes, and more.",
+                  "url": "https://moneasey.org/lessons",
+                  "provider": { "@id": "https://moneasey.org/#organization" }
+                },
+                "price": "0",
+                "priceCurrency": "USD"
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "SoftwareApplication",
+                  "name": "AI Trade Simulator",
+                  "description": "A free stock market trade simulator with AI chatbot support for learning to invest without real money.",
+                  "url": "https://moneasey.org/chatbot",
+                  "applicationCategory": "FinanceApplication",
+                  "operatingSystem": "Web",
+                  "provider": { "@id": "https://moneasey.org/#organization" }
+                },
+                "price": "0",
+                "priceCurrency": "USD"
+              }
+            ]
+          },
+          "knowsAbout": [
+            "Personal Finance","Budgeting","Investing","Credit Scores","Roth IRA",
+            "Retirement Planning","Tax Planning","Student Loans","Compound Interest",
+            "Stock Market","Index Funds","Emergency Fund","Debt Management","Financial Literacy"
+          ],
+          "sameAs": [
+            "https://www.instagram.com/moneaseyy/"
+          ]
         },
         {
           "@type": "WebSite",

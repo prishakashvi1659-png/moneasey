@@ -1,4 +1,5 @@
 import { useParams, Link, useNavigate } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import { articles } from '../data/articles'
 import './ArticleDetail.css'
 
@@ -58,7 +59,57 @@ export default function ArticleDetail() {
   const fallback = articles.filter(a => a.id !== article.id).slice(0, 3)
   const related = others.length > 0 ? others : fallback
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": `https://moneasey.org/articles/${article.id}`,
+    "headline": article.title,
+    "description": article.excerpt,
+    "datePublished": article.date,
+    "dateModified": article.date,
+    "author": {
+      "@type": "Organization",
+      "@id": "https://moneasey.org/#organization",
+      "name": "moneasey"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://moneasey.org/#organization",
+      "name": "moneasey",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://moneasey.org/favicon.svg"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://moneasey.org/articles/${article.id}`
+    },
+    "articleSection": article.topic,
+    "keywords": article.topic + ", financial literacy, personal finance, moneasey",
+    "isPartOf": { "@id": "https://moneasey.org/#website" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://moneasey.org/" },
+        { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://moneasey.org/articles" },
+        { "@type": "ListItem", "position": 3, "name": article.title, "item": `https://moneasey.org/articles/${article.id}` }
+      ]
+    }
+  }
+
   return (
+    <>
+    <Helmet>
+      <title>{article.title} — moneasey</title>
+      <meta name="description" content={article.excerpt} />
+      <link rel="canonical" href={`https://moneasey.org/articles/${article.id}`} />
+      <meta property="og:title" content={`${article.title} — moneasey`} />
+      <meta property="og:description" content={article.excerpt} />
+      <meta property="og:url" content={`https://moneasey.org/articles/${article.id}`} />
+      <meta property="og:type" content="article" />
+      <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+    </Helmet>
     <main className="detail-page">
       <div className="detail-header">
         <div className="detail-header-inner">
@@ -136,5 +187,6 @@ export default function ArticleDetail() {
         </aside>
       </div>
     </main>
+    </>
   )
 }
